@@ -43,5 +43,5 @@ $req = $db->prepare("INSERT INTO users (emailUser, pseudo, password) VALUES(:ema
 $req->bindParam(":pseudo", $_POST["pseudo"]);
 $req->bindParam(":password", $_POST["password"]);
 $req->bindParam(":email", $email);
-
+//
 ?>
