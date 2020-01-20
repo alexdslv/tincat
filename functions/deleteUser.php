@@ -1,10 +1,8 @@
 <?php
+require("database.php");
 
-//Connect to database
-// Prepare Delete SQL
-// Execute
+$req = $db->prepare("DELETE FROM users WHERE id = :id");
+$req->bindParam(":id" , $_GET["user_id"]);
+$req->execute();
 
-var_dump($_GET["user_id"] );
-
-
-?>
+header("Location: ../profils.php");
