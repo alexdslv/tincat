@@ -10,6 +10,5 @@
 
     if(empty($_POST['pseudo'])){
         $messagepseudo = "Nouveau Pseudo";
-        header("Location: ../userEditForm.php?message=$messagepseudo");   
     }
     
