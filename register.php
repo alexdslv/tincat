@@ -5,11 +5,22 @@
         <h1>TINCAT</h1>
         <form action="functions/setUser.php" method="post">
             <input type="text" placeholder="pseudo" name="pseudo">
-            <input type="email" name="email" placeholder="email">
             <input type="password" placeholder="password" name="password">
-            <input type="password" name="passwordbis" placeholder="confirmer mot de passe">
+            <input type="password" name="confirmPassword" placeholder="confirmer mot de passe">
             <input type="submit" value="register">
         </form>
+
+        <div class="message">
+            <?php
+                if (isset($_GET ["message"])){
+                    echo $_GET["message"];
+                }
+            ?>
+        </div>
+
+
     </div>
+
+    
 </body>
 </html>
