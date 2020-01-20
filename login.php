@@ -6,22 +6,18 @@
         <form action="functions/loginAction.php" method="post">
             <input type="text" placeholder="pseudo" name="pseudo">
             <input type="password" placeholder="password" name="password">
-            <input type="submit" value="register">
+            <input type="submit" value="login">
         </form>
 
-        <a href="register.php">Pas encore de compte ? </a>
+        <a href="register.php">Pas encore de compte ?</a>
 
         <div class="message">
             <?php
-                if (isset($_GET ["message"])){
+                if( isset($_GET["message"])){
                     echo $_GET["message"];
                 }
             ?>
         </div>
-
-
     </div>
-
-    
 </body>
 </html>
