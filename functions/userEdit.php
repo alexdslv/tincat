@@ -1,14 +1,19 @@
 <?php
+    echo "Edit User";
 
-    var_dump($_POST["pseudo"]);
-    var_dump($_POST["id"]);
-
+    // 1 : connect to database
     require("database.php");
 
-    $pseudo = $_POST['pseudo'];
-    $id = $_POST['id'];
+    //ID
+    //new pseudo
+    //Pour s'assurer que l'on recoit bien toute les informations via le formulaire
 
-    if(empty($_POST['pseudo'])){
-        $messagepseudo = "Nouveau Pseudo";
-    }
-    
+    var_dump($_POST);
+
+    $req = $db->prepare("UPDATE users SET id = ? WHERE id = ?");
+
+    //Update
+    $req->execute(["id"]);    
+
+    //header Location
+    //header("location:../profils.php");

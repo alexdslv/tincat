@@ -1,3 +1,4 @@
+
 <?php
     require("head.php");
 
@@ -19,13 +20,15 @@
     // 3 : execute
     $req->execute();
     // 4 : boucle
+    
     while($result = $req->fetch(PDO::FETCH_ASSOC)){
         ?>
             <div>
                 <strong><?= $result["pseudo"] ?></strong>
-                <a href="functions/deleteUser.php?user_id=<?php echo $result["id"]; ?>">Supprimer</a>
-                <a href="functions/userEdit.php?pseudo=<?php echo $result["pseudo"];?>">Editer</a>
-                </div>
+                <a href="userEditForm.php?user_id=<?php echo $result["id"]; ?>">Editer</a>
+                <!-- créer bouton qui redirige vers le formulaire!--> 
+                <a href="functions/deleteUser.php?user_id=<?php echo $result["id"];?>">Supprimer</a>
+            </div>
         <?php
     }
     ?>
