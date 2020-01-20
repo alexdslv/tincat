@@ -1,7 +1,5 @@
 <?php
     echo "Edit User";
-
-    // 1 : connect to database
     require("database.php");
 
     //ID
@@ -12,8 +10,4 @@
 
     $req = $db->prepare("UPDATE users SET id = ? WHERE id = ?");
 
-    //Update
     $req->execute(["id"]);    
-
-    //header Location
-    //header("location:../profils.php");

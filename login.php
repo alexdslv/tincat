@@ -9,7 +9,7 @@
             <input type="submit" value="login">
         </form>
 
-        <a href="register.php">Pas encore de compte ?</a>
+        <a href="register.php">Créer un nouveau compte</a>
 
         <div class="message">
             <?php
